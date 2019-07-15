@@ -17,13 +17,18 @@ public class CrafterLamps : MonoBehaviour
 
     private void Update()
     {
-        if (CrafterLogic.Comp1 != null)
+        var parent = Lamp1.transform.parent.transform.parent;
+        var Comp1 = parent.GetComponentInChildren<CrafterLogic>().Comp1;
+        var Comp2 = parent.GetComponentInChildren<CrafterLogic>().Comp2;
+        if (Comp1 != null)
         {
             Lamp1.intensity = 2;
         }
-        if(CrafterLogic.Comp2 != null)
+        else Lamp1.intensity = 0;
+        if (Comp2 != null)
         {
             Lamp2.intensity = 2;
         }
+        else Lamp2.intensity = 0;
     }
 }

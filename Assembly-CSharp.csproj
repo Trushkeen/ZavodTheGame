@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\CrafterLamps.cs" />
     <Compile Include="Assets\Scripts\CrafterLogic.cs" />
     <Compile Include="Assets\Scripts\FactoryMachines.cs" />
+    <Compile Include="Assets\Scripts\ListOfCraftableObjests.cs" />
     <Compile Include="Assets\Scripts\Manufacturing.cs" />
     <Compile Include="Assets\Scripts\Money.cs" />
     <Compile Include="Assets\Scripts\MouseMove.cs" />

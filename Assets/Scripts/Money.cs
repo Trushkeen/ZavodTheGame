@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
-    private static double PlayerMoney = 5000;
+    private static double PlayerMoney = 100000;
 
     void Start()
     {

@@ -23,7 +23,6 @@ public class Manufacturing : MonoBehaviour
     public void SetBuildableObject(GameObject obj)
     {
         BuildableObj = obj;
-        print("Set " + BuildableObj.name + " to " + name);
     }
 
     // Update is called once per frame
@@ -44,13 +43,15 @@ public class Manufacturing : MonoBehaviour
     private void CreateItem()
     {
         GameObject obj = Instantiate(BuildableObj, this.transform);
-        //print("Created " + obj.name + " on " + name + " | Buildable obj: " + BuildableObj);
+        print("Created " + obj.name + " on " + name + " | Buildable obj: " + BuildableObj);
         obj.transform.position = Spawner.transform.position;
         sw.Restart();
     }
 
     public void HideMenu()
     {
+        if (BuildableObj != null)
+            print("Set " + BuildableObj.name + " to " + name);
         GameObject.FindGameObjectWithTag("Builder1Menu").SetActive(false);
         BuilderToChangeType.GetComponent<Manufacturing>().BuildableObj = RequestedObj;
         MouseMove.UnfreezeCamera();
@@ -67,7 +68,7 @@ public class Manufacturing : MonoBehaviour
 
     public void StopManufacturing()
     {
-        BuildableObj = null;
+        RequestedObj = null;
     }
 
     public static void ShowBuilderMenu(GameObject menu)

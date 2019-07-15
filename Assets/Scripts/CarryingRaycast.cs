@@ -65,12 +65,12 @@ public class CarryingRaycast : MonoBehaviour
                     {
                         devinfo.text += $"\nBuildable Object: {rayhit.transform.gameObject.GetComponent<Manufacturing>().BuildableObj.name}";
                     }
-                    catch (UnassignedReferenceException)
+                    catch (Exception)
                     {
                         devinfo.text += $"\nBuildable Object wasn't assigned";
                     }
                 }
-                devinfo.text += "\nSuper prealpha build 00006";
+                devinfo.text += "\nSuper prealpha build 0007";
             }
         }
         else

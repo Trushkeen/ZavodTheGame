@@ -35,6 +35,24 @@ public class Seller : MonoBehaviour
                 Money.AddMoney(20);
                 text.text = Money.GetBalance().ToString();
             }
+            else if (goName.Contains("Stool"))
+            {
+                Destroy(other.gameObject, 1.0F);
+                Money.AddMoney(40);
+                text.text = Money.GetBalance().ToString();
+            }
+            else if (goName.Contains("Wood"))
+            {
+                Destroy(other.gameObject, 1.0F);
+                Money.AddMoney(40);
+                text.text = Money.GetBalance().ToString();
+            }
+            else if (goName.Contains("Junk"))
+            {
+                Destroy(other.gameObject, 1.0F);
+                Money.AddMoney(1);
+                text.text = Money.GetBalance().ToString();
+            }
         }
     }
 }
